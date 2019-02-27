@@ -82,7 +82,7 @@ form.addEventListener("submit", function (event) {
     event.preventDefault();
   });
 
-
+/*-----Filter divs-----*/
 /*Filter divs section   works -> works-header -> works-content -> line-left*/
 
 filterSelection("all");
@@ -137,25 +137,79 @@ for (var i = 0; i < lis.length; i++) {
     });
 }
 
+/*-----END Filter divs-----*/
+
+/*-----Modals 'Funders' Section-----*/
+
 // Get the modal
-var modal = document.getElementById('myModal');
+//var modal = document.getElementById('myModal');
+var modal_0 = document.getElementsByClassName('modal')[0];
+var modal_1 = document.getElementsByClassName('modal')[1];
+var modal_2 = document.getElementsByClassName('modal')[2];
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('myImg');
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
+//var img = document.getElementById('myImg');
+var img_0 = document.getElementsByClassName('myImg')[0];
+var img_1 = document.getElementsByClassName('myImg')[1];
+var img_2 = document.getElementsByClassName('myImg')[2];
+
+//var modalImg = document.getElementById("img01");
+var modalImg_0 = document.getElementsByClassName("modal-content")[0];
+var modalImg_1 = document.getElementsByClassName("modal-content")[1];
+var modalImg_2 = document.getElementsByClassName("modal-content")[2];
+
+//var captionText = document.getElementById("caption");
+var captionText_0 = document.getElementsByClassName("caption")[0];
+var captionText_1 = document.getElementsByClassName("caption")[1];
+var captionText_2 = document.getElementsByClassName("caption")[2];
+
+// img.onclick = function(){
+//   modal.style.display = "block";
+//   modalImg.src = this.src;
+//   captionText.innerHTML = this.alt;
+// }
+
+img_0.onclick = function(){
+  modal_0.style.display = "block";
+  modalImg_0.src = this.src;
+  captionText_0.innerHTML = this.alt;
 }
+
+
+img_1.onclick = function(){
+    modal_1.style.display = "block";
+    modalImg_1.src = this.src;
+    captionText_1.innerHTML = this.alt;
+  }
+
+img_2.onclick = function(){
+    modal_2.style.display = "block";
+    modalImg_2.src = this.src;
+    captionText_2.innerHTML = this.alt;
+  }
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span_0 = document.getElementsByClassName("close")[0];
+var span_1 = document.getElementsByClassName("close")[1];
+var span_2 = document.getElementsByClassName("close")[2];
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
+span_0.onclick = function() { 
+  modal_0.style.display = "none";
 }
 
 
+span_1.onclick = function() { 
+    modal_1.style.display = "none";
+  }
+
+
+span_2.onclick = function() { 
+    modal_2.style.display = "none";
+  }
+
+
+
+
+
+/*-----END Modals 'Funders' Section-----*/
